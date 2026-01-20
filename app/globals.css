@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "SF Pro Display", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #111827 0%, #020617 45%, #000 100%);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-panel-border bg-panel/60 shadow-glass backdrop-blur-glass;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-accent via-indigo-300 to-accent-2 bg-clip-text text-transparent;
+}
+
+.button-primary {
+  @apply rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-glow transition hover:opacity-90;
+}
+
+.button-ghost {
+  @apply rounded-full border border-panel-border px-6 py-3 text-sm font-semibold uppercase tracking-wide text-slate-200 transition hover:border-accent;
+}
